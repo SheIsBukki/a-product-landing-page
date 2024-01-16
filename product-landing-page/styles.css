@@ -1,0 +1,432 @@
+:root {
+  --background-colour: #000000;
+  --mainText-colour: #FFFFFF;
+  --secondBackground-colour: #A0252A;
+  --hover-colour: #A0252A80;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes motion_text {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100dvw;
+  height: 100dvh;
+  margin: auto;
+  font-family: 'Josefin Sans', 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 2rem;
+  background-color: var(--background-colour);
+  color: var(--mainText-colour);
+}
+
+header.main-header {
+  font-family: 'Cinzel Decorative', 'Cinzel', 'Raleway', serif;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: var(--background-colour);
+  margin: auto;
+  padding-block-start: 1rem;
+}
+
+header.main-header ul {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+header.main-header li {
+  padding-inline: 1rem;
+}
+
+header.main-header a {
+  text-decoration: none;
+  color: var(--mainText-colour);
+
+  &:hover {
+    background-color: var(--secondBackground-colour);
+  }
+}
+
+main {
+  max-width: 102.4rem;
+  margin: 10rem auto auto auto;
+  padding-inline: 5rem;
+}
+
+section:not(section:last-of-type) {
+  border-block-end: 0.1rem solid var(--secondBackground-colour);
+  padding-block: 8rem;
+}
+
+section:last-of-type {
+  padding-block: 8rem;
+}
+
+section.introduction {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+
+section.introduction h1 {
+  font-size: 3rem;
+  font-family: 'Cinzel Decorative', 'Cinzel', 'Raleway', serif;
+  margin-block-start: 1.5rem;
+}
+
+section.introduction p {
+  font-size: 2rem;
+  margin-block-start: 2rem;
+}
+
+button {
+  font-family: 'Cinzel', serif;
+
+  &:hover {
+    background-color: var(--hover-colour) !important;
+  }
+}
+
+section.introduction button {
+  color: var(--mainText-colour);
+  background-color: var(--secondBackground-colour);
+  font-size: 2.5rem;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  margin-block-start: 2.5rem;
+}
+
+section.introduction iframe {
+  max-width: 56rem;
+  height: 31.5rem;
+  border-radius: 0.5rem;
+}
+
+section.product-description article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+section.product-description header {
+  font-size: 2.5rem;
+  margin-block-end: 2rem;
+}
+
+section.product-description p {
+  padding-block: 1.5rem;
+  font-size: 1.8rem;
+}
+
+section.product-description p:first-of-type {
+  font-family: 'Raleway', serif;
+}
+
+section.offerings h1.offers-cta {
+  text-align: center;
+  font-family: 'Raleway', serif;
+  font-weight: normal;
+  margin-block-end: 2rem;
+}
+
+section.offerings div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.offerings article {
+  border: 0.2rem solid var(--secondBackground-colour);
+  border-radius: 0.2rem;
+  width: 25rem;
+  text-align: center;
+}
+
+section.offerings header {
+  background-color: var(--hover-colour);
+  font-size: 1.8rem;
+  padding-block: 1.5rem;
+}
+
+section.offerings article h1 {
+  font-family: 'Cinzel', 'Raleway', serif;
+  font-size: 2rem;
+  padding-block: 1rem;
+}
+
+section.offerings ul {
+  list-style-type: none;
+  padding-block: 1rem;
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+}
+
+section.offerings button {
+  margin-block: 1.5rem;
+  background-color: var(--secondBackground-colour);
+  border: none;
+  border-radius: 0.3rem;
+  color: var(--mainText-colour);
+  font-size: 1.8rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+
+section.social-proof h1 {
+  text-align: center;
+  font-family: 'Raleway', serif;
+  padding-block-end: 2rem;
+}
+
+section.social-proof form {
+  display: grid;
+  justify-items: center;
+}
+
+section.social-proof input {
+  width: 25rem;
+  padding: 0.5rem;
+  margin-block-end: 1.5rem;
+
+  &:focus {
+    outline: 0.2rem solid var(--secondBackground-colour);
+  }
+}
+
+section.social-proof button {
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: var(--secondBackground-colour);
+  color: var(--mainText-colour);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+section.social-proof article {
+  margin-block-start: 5rem;
+  padding-inline: 5rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.motion-text span {
+  display: inline-flex;
+  animation: motion_text 30s linear infinite;
+}
+
+section.social-proof blockquote {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  width: 50rem;
+  margin: 0 5rem;
+}
+
+section.social-proof cite {
+  display: block;
+  padding-block: 1rem;
+  font-size: 2rem;
+}
+
+section.about {
+  padding-inline: 4rem;
+}
+
+section.about h1 {
+  font-family: 'Cinzel Decorative', 'Cinzel', 'Raleway', serif;;
+  font-size: 2rem;
+  padding-block-end: 2rem;
+}
+
+section.about div {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+section.about p {
+  font-size: 1.6rem;
+  padding-inline: 2rem;
+}
+
+section.about figure {
+  padding-block: 2rem;
+  max-width: 51rem;
+}
+
+section.about figcaption {
+  font-size: 1rem;
+  text-align: center;
+}
+
+section.about a {
+  text-decoration: none;
+  color: var(--mainText-colour);
+
+  &:hover {
+    color: var(--secondBackground-colour);
+    background-color: var(--mainText-colour);
+  }
+}
+
+footer {
+  background-color: var(--hover-colour);
+  padding: 2rem;
+  text-align: end;
+}
+
+footer div {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  padding-block: 0.5rem;
+}
+
+footer a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--mainText-colour);
+  padding: 0.5rem;
+
+  &:hover {
+    background-color: var(--mainText-colour);
+    color: var(--secondBackground-colour);
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 60rem;
+    margin: 10rem auto auto auto;
+    padding-inline: 0;
+  }
+
+  section.introduction, 
+  section.product-description article,
+  section.offerings div,
+  section.about div {
+    display: block;
+  }
+
+  section.introduction article {
+    padding-block-end: 3rem;
+    padding-inline: 1.5rem;
+  }
+
+  section.product-description div:not(section.product-description div:last-of-type) {
+    padding-block-end: 5rem;
+  }
+
+  section.offerings article {
+    margin: auto;
+    margin-block-end: 5rem;
+  }
+
+  section.offerings article:last-of-type {
+    margin-block-end: 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer div {
+    justify-content: center;
+  }
+}  
+
+
+@media only screen and (max-width: 900px) {
+  section.introduction,
+  section.offerings div,
+  section.about div {
+    display: block;
+  }
+
+  section.introduction article {
+    padding-block-end: 3rem;
+  }
+
+  section.offerings article {
+    margin: auto;
+    margin-block-end: 5rem;
+  }
+
+  section.offerings article:last-of-type {
+    margin-block-end: 0;
+  }
+
+  section.about figure {
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+
+/*:root {
+   this has to be set to switch between light or dark 
+  color-scheme: light dark;
+
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+  --light-code: tomato;
+
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+  --dark-code: gold;
+}
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+code {
+  color: light-dark(var(--light-code), var(--dark-code));
+}*/
+   
