@@ -1,6 +1,10 @@
 # a-product-landing-page
 A landing page for a high fashion styling brand
 
+GitHub Pages: https://sheisbukki.github.io/a-product-landing-page/
+
+Vercel: https://a-product-landing-page.vercel.app/#benefits
+
 This was created for learning purposes, as part of the projects in the Freecodecamp Responsive Web Design certification. 
 Freecodecamp provided a list of user stories to guide the project, and provided this sample landing page https://product-landing-page.freecodecamp.rocks, which I took some inspirations from, particularly the pricing section and the email subscription section. 
 I also consulted https://convertkit.com/resources/blog/product-landing-pages, and followed the template showing the 5 essential elements every product landing page should have.
